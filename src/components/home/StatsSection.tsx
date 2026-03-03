@@ -34,7 +34,12 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
     return () => observer.disconnect();
   }, [target]);
 
-  const displayValue = target >= 1000 ? (count >= 1000 ? '100K' : count.toLocaleString()) : count;
+  const displayValue =
+    target >= 100000
+      ? count >= 100000
+        ? '100K'
+        : Math.floor(count / 1000) + 'K'
+      : count;
 
   return (
     <span ref={ref}>

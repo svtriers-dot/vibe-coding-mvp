@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Mail } from 'lucide-react';
+import { company } from '@/data/content';
 
 export default function ContactCTA() {
   return (
@@ -35,10 +36,10 @@ export default function ContactCTA() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="mailto:info@tesstech.ru"
+                href={`mailto:${company.email}`}
                 className="flex items-center gap-2 px-8 py-4 rounded-xl border border-[#2A2A3E] hover:border-indigo-500/40 text-gray-300 hover:text-white font-semibold text-base transition-all duration-200 hover:bg-white/5"
               >
-                Написать на почту
+                {company.email}
               </a>
             </div>
           </div>

@@ -81,6 +81,12 @@ body {
   box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
 }
 
+/* Float animation for hero cards */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
 /* Noise texture overlay */
 .noise::before {
   content: '';
