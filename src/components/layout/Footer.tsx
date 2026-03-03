@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { company, footerNav } from '@/data/content';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,14 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">T</span>
-              </div>
-              <div>
-                <span className="font-semibold text-white text-lg tracking-tight">Tess</span>
-                <span className="font-light text-indigo-400 text-lg"> Technology</span>
-              </div>
+            <Link href="/" className="inline-flex mb-4" aria-label="Tess Technology — главная">
+              <Logo size="sm" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
               {company.tagline}. Более 10 лет помогаем компаниям принимать обоснованные стратегические решения.

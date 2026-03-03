@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { navigation, services } from '@/data/content';
+import Logo from '@/components/ui/Logo';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,14 +47,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">T</span>
-            </div>
-            <div>
-              <span className="font-semibold text-white text-lg tracking-tight">Tess</span>
-              <span className="font-light text-indigo-400 text-lg"> Technology</span>
-            </div>
+          <Link href="/" aria-label="Tess Technology — главная">
+            <Logo size="sm" />
           </Link>
 
           {/* Desktop nav */}
